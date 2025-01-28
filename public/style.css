@@ -152,9 +152,8 @@ img { max-width: 100%; height: auto; display: inside; }
 
 .home-img {
     position: absolute;
-    right: 0;
-    top: 180px; 
-    bottom: 30px;
+    bottom: -11.3vh;
+
     
 }
 
@@ -220,7 +219,7 @@ img { max-width: 100%; height: auto; display: inside; }
     transition: .3s;
 }
 
-    .portfolio-img:hover .portfolio-link { bottom: 0.5; left:0.5; right: 0.5; top:0.5;}
+    .portfolio-img:hover .portfolio-link { bottom: 0.5; }
 .portfolio-link-color { color: var(--dark-color); }
 
 /*CONTACT*/
@@ -265,6 +264,10 @@ img { max-width: 100%; height: auto; display: inside; }
     .footer-social:hover { color: azure; }
 
 /*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+        .home-img { width: 350px; bottom: 1.5vh ; right: 0; }
+    }
 
 @media screen and (min-width: 768px) {
     body { margin: 0; }
