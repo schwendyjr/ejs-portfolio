@@ -128,4 +128,4 @@ portfolio/
 
 ## Author
 
--   **Parker Schwendeman** - [Your GitHub Profile](https://github.com/schwendyjr)
+-   **Parker Schwendeman** - [GitHub Profile](https://github.com/schwendyjr)
