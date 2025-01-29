@@ -84,20 +84,6 @@ https://parker-schwendeman-portfolio.onrender.com/
     -   **Scroll Animations:** Used the ScrollReveal.js library for animations.
 -   **Responsive Design:** The HTML and CSS were written in a mobile-first methodology. Responsive design was achieved using media queries to change layout and font sizes at different breakpoints.
 
-### 4. Project Structure
-
-portfolio/
-├── index.js # Main server file
-├── package.json # Project dependencies
-├── package-lock.json 
-├── public/ # Static files (CSS, JavaScript, Images)
-│ ├── style.css # Stylesheet
-│ ├── script.js # Client-side scripts
-│ └── porsche.png 
-│ └── garden.png 
-│ └── placeholder-image.jpg 
-└── views/
-└── index.ejs # Main HTML template
 
 ## Running the Application
 
@@ -105,6 +91,8 @@ portfolio/
 
 
     git clone [https://github.com/schwendyjr/ejs-portfolio.git]
+
+    ```
     cd [ejs-portfolio]
 
 2.  **Install dependencies:**
