@@ -92,20 +92,23 @@ https://parker-schwendeman-portfolio.onrender.com/
     ```
     git clone [https://github.com/schwendyjr/ejs-portfolio.git]
     ```
-    
+
     ```
     cd [ejs-portfolio]
     ```
 
 2.  **Install dependencies:**
 
-
+    ```
     npm install
+    ```
+
 
 3.  **Start the server:**
 
+    ```
     npm start
-
+    ```
 
     This will start the server, and you can open your browser at `http://localhost:3000`.
 
