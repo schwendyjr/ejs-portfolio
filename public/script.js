@@ -80,17 +80,3 @@ sr.reveal('.contact-text', {interval: 200});
 sr.reveal('.contact-input', {delay: 400});
 sr.reveal('.contact-button', {delay: 600});
 
-// Skill Image Placeholder functionality
-const skillLogo = document.getElementById('skill-logo'); //Get the image element
-const skillNames = document.querySelectorAll('.skills-name'); //Get all skill names
-
-skillNames.forEach((skill) => {
-  skill.addEventListener('mouseover', () => {
-    const logo = skill.getAttribute('data-logo'); //Get the logo attribute
-    skillLogo.src = logo; //Change image to logo attribute
-  });
-
-  skill.addEventListener('mouseout', () => {
-    skillLogo.src = 'placeholder-image.jpg'; //Change the image back to placeholder
-  });
-});

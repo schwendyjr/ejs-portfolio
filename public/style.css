@@ -370,7 +370,7 @@ img {
   row-gap: 2rem;
 }
 .footer-text {
-  color: azure;
+  color: #E8F1F2;
 }
 .footer-title {
   font-size: var(--normal-font-size);
@@ -379,18 +379,18 @@ img {
 }
 .footer-link {
   padding: 0.25rem 0;
-  color: azure;
+  color: #E8F1F2;
 }
 .footer-link:hover {
-  color: var(--white-color);
+  color: #fcbf49;
 }
 .footer-social {
   font-size: 1.4rem;
   margin-right: var(--mb1);
-  color: azure;
+  color: #E8F1F2;
 }
 .footer-social:hover {
-  color: azure;
+  color: #fcbf49;
 }
 
 /* Media Queries for responsive layout */
