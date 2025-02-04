@@ -108,53 +108,27 @@
         
         <section class="portfolio section" id="portfolio">
             <h2 class="section-title">Portfolio</h2>
-
+        
             <div class="portfolio-container bd-grid">
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
+                <% portfolioItems.forEach(item => { %>
+                    <div class="portfolio-item">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="<%= item.image %>" alt="<%= item.title %>">
+                            </div>
+                            <h3 class="portfolio-title">
+                                <a href="/portfolio/<%= item.id %>" target="_blank"><%= item.title %></a>
+                            </h3>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                     <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-img">
-                    <img src="placeholder-image.jpg" alt="work image">
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-
+                <% }); %>
             </div>
         </section>
+        
+        
+        
+        
+        
 
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
@@ -202,7 +176,7 @@
 
             <div class="footer-data">
                 <h2 class="footer-title">FOLLOW</h2>
-                 <a href="https://www.instagram.com/tamedogdesign" class="footer-social"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.instagram.com/tamedogdesign" class="footer-social"><i class='bx bxl-instagram'></i></a>
                 <a href="https://www.linkedin.com/in/parker-schwendeman/" class="footer-social"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
