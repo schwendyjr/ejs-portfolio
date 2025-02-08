@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parker's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body class="<%= !isDetailPage ? 'homepage-portfolio-grid' : '' %>"></class=>>
     <!-- Header Section -->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -54,7 +54,7 @@
                     </a>
                 </div>
 
-                <img src="images/porsche.png" alt="Porsche Sketch" class="home-img">
+                <img src="/images/portfolio/porsche.png" alt="Porsche Sketch" class="home-img">
             </div>
         </section>
 
@@ -64,7 +64,7 @@
 
             <div class="about-container bd-grid">
                 <div class="about-img">
-                    <img src="images/garden.png" alt="Parker Schwendeman image">
+                    <img src="/images/portfolio/garden.png" alt="Parker Schwendeman image">
                 </div>
 
                 <div>
@@ -112,7 +112,7 @@
 
                 <!-- Skills Image Display -->
                 <div class="skills-img">
-                    <img src="images/skills/html-logo.png" alt="skills image" id="skill-logo">
+                    <img src="/images/skills/html-logo.png" alt="skills image" id="skill-logo">
                 </div>
             </div>
         </section>
@@ -122,19 +122,67 @@
             <h2 class="section-title">Portfolio</h2>
 
             <div class="portfolio-container bd-grid">
-                <!-- Portfolio Items (Dynamically rendered using EJS) -->
-                <% portfolioItems.forEach(item => { %>
-                    <div class="portfolio-item">
-                        <div class="portfolio-card">
-                            <div class="portfolio-img">
-                                <img src="<%= item.image %>" alt="<%= item.title %>">
+                <% if (isDetailPage && project) { %>
+                    <!-- Render Detail Page Content for a single project -->
+                    <div class="portfolio-detail-content">
+                        <h3 class="portfolio-detail-title"><%= project.title %></h3>
+
+                        <!-- Display Project Images (assuming project.images is an array) -->
+                        <% if (project.images && project.images.length > 0) { %>
+                            <div class="portfolio-detail-images">
+                                <% project.images.forEach(image => { %>
+                                    <img src="<%= image %>" alt="<%= project.title %> - Image">
+                                <% }); %>
                             </div>
-                            <h3 class="portfolio-title">
-                                <a href="/portfolio/<%= item.id %>" target="_blank"><%= item.title %></a>
-                            </h3>
-                        </div>
+                        <% } else { %>
+                            <img src="<%= project.image %>" alt="<%= project.title %>"> <!-- Fallback to thumbnail if no detail images -->
+                        <% } %>
+
+                        <!-- Project Process/Description (using headings as requested) -->
+                        <% if (project.processHeadings && project.processContent) { %>
+                            <div class="portfolio-detail-process">
+                                <% for(let i = 0; i < project.processHeadings.length; i++) { %>
+                                    <h4><%= project.processHeadings[i] %></h4>
+                                    <p><%= project.processContent[i] %></p>
+                                <% } %>
+                            </div>
+                        <% } else if (project.description) { %>
+                            <p class="portfolio-detail-description"><%= project.description %></p>
+                        <% } %>
+
+
+                        <!-- Project Links -->
+                        <% if (project.links) { %>
+                            <div class="portfolio-detail-links">
+                                <% if (project.links.liveDemo) { %>
+                                    <a href="<%= project.links.liveDemo %>" target="_blank" class="portfolio-detail-link">Live Demo</a>
+                                <% } %>
+                                <% if (project.links.github) { %>
+                                    <a href="<%= project.links.github %>" target="_blank" class="portfolio-detail-link">GitHub Repo</a>
+                                <% } %>
+                                <href class="portfolio-detail-button portfolio-detail-link" onclick="closeDetailPageTab()">
+                                    Close Tab & Return
+                                </href>
+                                <!-- Add more link types as needed -->
+                            </div>
+                        <% } %>
                     </div>
-                <% }); %>
+
+                <% } else { %>
+                    <!-- Render Portfolio Grid (for homepage) -->
+                    <% portfolioItems.forEach(item => { %>
+                        <div class="portfolio-item">
+                            <div class="portfolio-card">
+                                <div class="portfolio-img">
+                                    <img src="<%= item.image %>" alt="<%= item.title %>">
+                                </div>
+                                <h3 class="portfolio-title">
+                                    <a href="/portfolio/<%= item.id %>" target="_blank"><%= item.title %></a>
+                                </h3>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } %>
             </div>
         </section>
 
@@ -192,6 +240,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Custom Javascript File -->
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
