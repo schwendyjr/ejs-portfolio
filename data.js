@@ -2,7 +2,7 @@ const portfolioItems = [
     {
         id: "project-1",
         title: "OurSOS - Your Lifeline in Times of Crisis",
-        image: "oursos-hifi.png",
+        image: "images/oursos-hifi.png",
         overview: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.", // More descriptive overview
         isFictional: false, // Indicate if it's a real or concept project
         client: "Community Safety Initiative (Hypothetical)", // Or actual client name if real
@@ -21,7 +21,7 @@ const portfolioItems = [
     {
         id: "project-2",
         title: "Anderson Grant - Interior Design Brochure",
-        image: "/brochure-mockup.jpg",
+        image: "images/brochure-mockup.jpg",
         overview: "Lorem Ipsum ", // More descriptive overview
         isFictional: true, // Indicate if it's a real or concept project
         client: "Anderson Grant", // Or actual client name if real
@@ -39,7 +39,7 @@ const portfolioItems = [
     {
         id: "project-3",
         title: "Tradesquare - Community Marketplace",
-        image: "Tradesquare-mockup.png",
+        image: "images/Tradesquare-mockup.png",
         overview: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.", // More descriptive overview
         isFictional: false, // Indicate if it's a real or concept project
         client: "Community Safety Initiative (Hypothetical)", // Or actual client name if real
@@ -58,7 +58,7 @@ const portfolioItems = [
     {
         id: "project-1",
         title: "OurSOS - Your Lifeline in Times of Crisis",
-        image: "oursos-hifi.png",
+        image: "images/oursos-hifi.png",
         overview: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.", // More descriptive overview
         isFictional: false, // Indicate if it's a real or concept project
         client: "Community Safety Initiative (Hypothetical)", // Or actual client name if real
@@ -77,7 +77,7 @@ const portfolioItems = [
     {
         id: "project-2",
         title: "Anderson Grant - Interior Design Brochure",
-        image: "/brochure-mockup.jpg",
+        image: "images/brochure-mockup.jpg",
         overview: "Lorem Ipsum ", // More descriptive overview
         isFictional: true, // Indicate if it's a real or concept project
         client: "Anderson Grant", // Or actual client name if real
@@ -95,7 +95,7 @@ const portfolioItems = [
     {
         id: "project-3",
         title: "Tradesquare - Community Marketplace",
-        image: "Tradesquare-mockup.png",
+        image: "images/Tradesquare-mockup.png",
         overview: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.", // More descriptive overview
         isFictional: false, // Indicate if it's a real or concept project
         client: "Community Safety Initiative (Hypothetical)", // Or actual client name if real

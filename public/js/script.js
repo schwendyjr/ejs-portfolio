@@ -80,3 +80,18 @@ sr.reveal('.contact-text', {interval: 200});
 sr.reveal('.contact-input', {delay: 400});
 sr.reveal('.contact-button', {delay: 600});
 
+document.addEventListener('DOMContentLoaded', () => {
+    const skillSpans = document.querySelectorAll('.skills-name');
+    const logoImage = document.getElementById('skill-logo');
+    
+
+    skillSpans.forEach(skillSpan => {
+        skillSpan.addEventListener('mouseover', () => {
+            const logoFilename = skillSpan.dataset.logo;
+            const imagePath = `/images/skills/${logoFilename}`;
+            logoImage.src = imagePath;
+        });
+
+        
+    });
+});

@@ -569,3 +569,12 @@ img {
     margin-right: auto;
   }
 }
+
+.skills-img img#skill-logo { /* More specific selector for clarity */
+  /* Keep any existing styles you have for .skills-img img */
+
+  max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
+  max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
+  object-fit: contain; /* Maintain aspect ratio and fit within the box */
+  margin-left: 160px;
+}
