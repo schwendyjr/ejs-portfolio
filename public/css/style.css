@@ -84,7 +84,7 @@ img {
 
 /* -------------------- Reusable Section Styles -------------------- */
 .section {
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 
 .section-title {
@@ -546,6 +546,7 @@ img {
   .about-img img {
     width: 265px;
     object-fit: cover;
+    margin-left:90px
   }
 
   .skills-container {
@@ -587,4 +588,108 @@ img {
   max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
   object-fit: contain; /* Maintain aspect ratio and fit within the box */
   margin-left: 160px;
+}
+
+/* style.css (add to your existing file) */
+
+.portfolio-detail-content {
+  text-align: left; /* Align detail content to the left */
+  padding: 2rem;
+}
+
+.portfolio-detail-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb2);
+  color: var(--dark-color); /* Or your preferred title color */
+}
+
+.portfolio-detail-images {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  gap: 1rem; /* Spacing between images */
+  margin-bottom: var(--mb3);
+}
+
+.portfolio-detail-images img {
+  max-width: 45%; /* Adjust as needed, or use fixed widths */
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.portfolio-detail-process h4 {
+  font-size: var(--normal-font-size);
+  font-weight: bold;
+  margin-top: var(--mb2);
+  margin-bottom: var(--mb1);
+  color: var(--first-color); /* Or your preferred heading color */
+}
+
+.portfolio-detail-process p {
+  margin-bottom: var(--mb3);
+  text-align: justify; /* Justify process text */
+}
+
+.portfolio-detail-description {
+  margin-bottom: var(--mb3);
+  text-align: justify;
+}
+
+
+.portfolio-detail-links {
+  margin-top: var(--mb3);
+}
+
+.portfolio-detail-links a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-right: var(--mb2);
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-detail-links a:hover {
+  background-color: var(--dark-color);
+}
+
+body:not(.homepage-portfolio-grid) .portfolio.section .portfolio-container.bd-grid { /* VERY SPECIFIC SELECTOR */ /* Or use .portfolio .portfolio-container if bd-grid is not always present */
+  display: block; /* Change display to block to remove grid */
+  width: 95%;     /* Take full width */
+  background-color: floralwhite;
+  border-radius: 15px;
+  max-width: none; /* Remove max-width */
+  margin-left: 5;  /* Reset margins */
+  margin-right: 5;
+  padding-left: 0;
+  padding-right: 0;
+  grid-template-columns: none; /* Reset grid properties */
+  grid-template-rows: none;
+  column-gap: 0;
+  row-gap: 0;
+  justify-items: initial;
+  align-items: initial;
+}
+
+
+
+/* style.css - Optional button styling */
+
+.portfolio-detail-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-right: var(--mb2);
+  margin-top: 8px;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.portfolio-detail-button:hover {
+  background-color: var(--dark-color); /* Darken on hover */
+  cursor: pointer;
 }
