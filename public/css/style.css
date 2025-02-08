@@ -277,6 +277,7 @@ img {
 .skills-name:hover {
   background-color: var(--first-color);
   color: var(--white-color);
+  cursor: default;
 }
 
 .skills-img img {
