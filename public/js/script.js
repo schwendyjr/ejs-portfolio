@@ -48,8 +48,6 @@ function scrollActive() {
     })
 }
 
-
-
 // Scroll Reveal Settings
 
 const sr = ScrollReveal({

@@ -1,32 +1,39 @@
-/* Import Google Font */
+/* style.css */
+
+/* -------------------- Import Google Font -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* CSS Variables */
+/* -------------------- CSS Variables -------------------- */
 :root {
+  /* Font */
   --header-height: 3rem;
   --font-medium: 500;
 
+  /* Colors */
   --first-color: #454545;
   --white-color: #fcbf49;
   --dark-color: #454545;
   --text-color: #fcbf49;
   --text-color2: #454545;
 
+  /* Typography */
   --body-font: 'Montserrat', sans-serif;
   --big-font-size: 4.25rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 
+  /* Margin bottom values */
   --mb1: 0.5rem;
   --mb2: 1rem;
   --mb3: 1.5rem;
   --mb4: 2rem;
 
+  /* Z-index for fixed elements */
   --z-fixed: 100;
 }
 
-/* Responsive font sizes for larger screens */
+/* ---------- Responsive font sizes for larger screens ---------- */
 @media screen and (min-width: 768px) {
   :root {
     --big-font-size: 6.5rem;
@@ -36,7 +43,7 @@
   }
 }
 
-/* Basic Reset and Box Model */
+/* -------------------- Basic Reset and Box Model -------------------- */
 *,
 *::before,
 *::after {
@@ -75,7 +82,7 @@ img {
   display: inside;
 }
 
-/* Reusable Section Styles */
+/* -------------------- Reusable Section Styles -------------------- */
 .section {
   padding: 3rem 0;
 }
@@ -100,7 +107,7 @@ img {
   background-color: var(--first-color);
 }
 
-/* Grid Layout */
+/* -------------------- Grid Layout -------------------- */
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -111,7 +118,7 @@ img {
   margin-right: var(--mb2);
 }
 
-/* Header Styles */
+/* -------------------- Header Styles -------------------- */
 .l-header {
   width: 100%;
   position: fixed;
@@ -157,7 +164,7 @@ img {
   background-color: var(--first-color);
 }
 
-/* Mobile Menu Styles */
+/* -------------------- Mobile Menu Styles -------------------- */
 @media screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -176,7 +183,7 @@ img {
   }
 }
 
-/* Home Section Styles */
+/* -------------------- Home Section Styles -------------------- */
 .home {
   position: relative;
   background-color: var(--first-color);
@@ -187,7 +194,7 @@ img {
   row-gap: 5rem;
 }
 .home-title {
-  margin-left: 0; /* Adjust as needed */
+  margin-left: 0; 
   align-self: flex-end;
   font-size: var(--h2-font-size);
   color: var(--white-color);
@@ -213,7 +220,7 @@ img {
   bottom: -11.3vh;
 }
 
-/* About Section Styles */
+/* -------------------- About Section Styles -------------------- */
 .about-container {
   justify-items: center;
   row-gap: 2rem;
@@ -256,7 +263,7 @@ img {
   color: var(--first-color);
 }
 
-/* Skills Section Styles */
+/* -------------------- Skills Section Styles -------------------- */
 .skills-container {
   row-gap: 2rem;
 }
@@ -284,7 +291,7 @@ img {
   border-radius: 0.5rem;
 }
 
-/* Portfolio Section Styles */
+/* -------------------- Portfolio Section Styles -------------------- */
 .portfolio {
   background-color: var(--white-color);
 }
@@ -322,7 +329,7 @@ img {
   color: var(--dark-color);
 }
 
-/* Contact Section Styles */
+/* -------------------- Contact Section Styles -------------------- */
 .contact-container {
   row-gap: 2rem;
 }
@@ -363,7 +370,7 @@ img {
   cursor: pointer;
 }
 
-/* Footer Styles */
+/* -------------------- Footer Styles -------------------- */
 .footer {
   background-color: var(--dark-color);
 }
@@ -394,6 +401,7 @@ img {
   color: #fcbf49;
 }
 
+/* -------------------- Portfolio Detail Page Styles -------------------- */
 .portfolio-detail {
   padding: 3rem 0;
   text-align: center;
@@ -409,6 +417,7 @@ img {
   text-align: left;
 }
 
+/* -------------------- Portfolio Item Styles -------------------- */
 .portfolio-item {
   text-align: center;
 }
@@ -427,6 +436,7 @@ img {
   color: var(--first-color);
 }
 
+/* -------------------- Portfolio Card Styles -------------------- */
 .portfolio-card {
     background: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
     padding: 15px;
@@ -460,8 +470,7 @@ img {
     color: var(--first-color);
 }
 
-
-/* Media Queries for responsive layout */
+/* -------------------- Media Queries for responsive layout -------------------- */
 @media screen and (max-width: 768px) {
   .home-img {
     width: 350px;
@@ -571,9 +580,9 @@ img {
   }
 }
 
-.skills-img img#skill-logo { /* More specific selector for clarity */
-  /* Keep any existing styles you have for .skills-img img */
+/* -------------------- Specific Skill Logo Image Style -------------------- */
 
+.skills-img img#skill-logo { /* More specific selector for clarity */
   max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
   max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
   object-fit: contain; /* Maintain aspect ratio and fit within the box */

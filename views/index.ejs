@@ -8,12 +8,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Header Section -->
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
                 <a href="#" class="nav-logo">Parker Schwendeman</a>
             </div>
 
+            <!-- Navigation Menu -->
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
@@ -24,13 +26,16 @@
                 </ul>
             </div>
 
+            <!-- Navigation Toggle (for mobile) -->
             <div class="nav-toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="l-main">
+        <!-- Home Section -->
         <section class="home" id="home">
             <div class="home-container bd-grid">
                 <h1 class="home-title">
@@ -41,6 +46,7 @@
                   – Ferdinand Porsche
                 </h1>
 
+                <!-- Scroll Down Indicator -->
                 <div class="home-scroll">
                     <a href="#about" class="home-scroll-link">
                       <i class='bx bx-left-arrow-alt' ></i>
@@ -52,21 +58,22 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
 
             <div class="about-container bd-grid">
                 <div class="about-img">
-                    <img src="images/garden.png" alt="John Doe image">
+                    <img src="images/garden.png" alt="Parker Schwendeman image">
                 </div>
 
                 <div>
                     <h2 class="about-subtitle">I believe with great design, anything is possible.</h2>
                     <span class="about-profession">Digital Design and Development</span>
-                    <p class="about-text"></p>
+                    <p class="about-text">Hello, I’m Parker Schwendeman, a recent graduate of British Columbia Institute of Technology (BCIT) with a Digital Design and Development Diploma currently in Vancouver.</p>
 
+                    <!-- Social Media Links -->
                     <div class="about-social">
-                        Hello, I’m Parker Schwendeman, a recent graduate of British Columbia Institute of Technology (BCIT) with a Digital Design and Development Diploma currently in Vancouver.
                         <a href="https://www.linkedin.com/in/parker-schwendeman/" class="about-social-icon"><i class='bx bxl-linkedin'></i></a>
                         <a href="https://github.com/schwendyjr" class="about-social-icon"><i class='bx bxl-github'></i></a>
                         <a href="https://www.instagram.com/tamedogdesign" class="about-social-icon"><i class='bx bxl-instagram'></i></a>
@@ -75,13 +82,15 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
             <div class="skills-container bd-grid">
                 <div class="skills-box">
                     <h3 class="skils-subtitle">Development</h3>
-        
+
+                    <!-- Development Skills List -->
                     <span class="skills-name" data-logo="html-logo.png">HTML</span>
                     <span class="skills-name" data-logo="css-logo.png">CSS</span>
                     <span class="skills-name" data-logo="javascript-logo.png">JAVASCRIPT</span>
@@ -89,9 +98,10 @@
                     <span class="skills-name" data-logo="react-logo.png">REACT</span>
                     <span class="skills-name" data-logo="nextjs-logo.png">NEXT.JS</span>
                     <span class="skills-name" data-logo="github-logo.png">GITHUB</span>
-        
+
                     <h3 class="skils-subtitle">Design</h3>
-        
+
+                    <!-- Design Skills List -->
                     <span class="skills-name" data-logo="figma-logo.png">FIGMA</span>
                     <span class="skills-name" data-logo="illustrator-logo.png">ILLUSTRATOR</span>
                     <span class="skills-name" data-logo="indesign-logo.png">INDESIGN</span>
@@ -100,16 +110,19 @@
                     <span class="skills-name" data-logo="premierepro-logo.png">PREMIERE PRO</span>
                 </div>
 
+                <!-- Skills Image Display -->
                 <div class="skills-img">
                     <img src="images/skills/html-logo.png" alt="skills image" id="skill-logo">
                 </div>
             </div>
         </section>
-        
+
+        <!-- Portfolio Section -->
         <section class="portfolio section" id="portfolio">
             <h2 class="section-title">Portfolio</h2>
-        
+
             <div class="portfolio-container bd-grid">
+                <!-- Portfolio Items (Dynamically rendered using EJS) -->
                 <% portfolioItems.forEach(item => { %>
                     <div class="portfolio-item">
                         <div class="portfolio-card">
@@ -124,16 +137,13 @@
                 <% }); %>
             </div>
         </section>
-        
-        
-        
-        
-        
 
+        <!-- Contact Section -->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
 
             <div class="contact-container bd-grid">
+                <!-- Contact Information -->
                 <div class="contact-info">
                     <h3 class="contact-subtitle">EMAIL</h3>
                     <span class="contact-text">tamedogdesign@gmail.com</span>
@@ -145,24 +155,22 @@
                     <span class="contact-text">Vancouver, BC, Canada</span>
                 </div>
 
+                <!-- Contact Form -->
                 <form action="" class="contact-form">
                     <div class="contact-inputs">
                         <input type="text" placeholder="Name" class="contact-input">
                         <input type="email" placeholder="Email" class="contact-input">
                     </div>
-                    <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
+                    <textarea name="" id="" cols="0" rows="10" placeholder="Your Message" class="contact-input"></textarea>
                     <input type="submit" value="Send" class="contact-button">
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="footer section">
         <div class="footer-container bd-grid">
-             <div class="footer-data">
-
-             </div>
-
             <div class="footer-data">
                 <h2 class="footer-title">Parker Schwendeman</h2>
                 <ul>
@@ -181,7 +189,9 @@
             </div>
         </div>
     </footer>
+
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom Javascript File -->
     <script src="js/script.js"></script>
 </body>
 </html>
