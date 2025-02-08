@@ -547,7 +547,7 @@ img {
   .about-img img {
     width: 265px;
     object-fit: cover;
-    margin-left:90px
+    margin-left:30px
   }
 
   .skills-container {
@@ -588,7 +588,7 @@ img {
   max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
   max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
   object-fit: contain; /* Maintain aspect ratio and fit within the box */
-  margin-left: 160px;
+  margin-left: 90px;
 }
 
 /* style.css (add to your existing file) */
