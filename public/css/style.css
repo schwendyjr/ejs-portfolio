@@ -79,7 +79,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  display: inside;
+  display: block; /* Changed from 'inside' to 'block' for consistency and to avoid potential issues with layout */
 }
 
 /* -------------------- Reusable Section Styles -------------------- */
@@ -194,7 +194,7 @@ img {
   row-gap: 5rem;
 }
 .home-title {
-  margin-left: 0; 
+  margin-left: 0;
   align-self: flex-end;
   font-size: var(--h2-font-size);
   color: var(--white-color);
@@ -290,6 +290,12 @@ img {
 .skills-img img {
   border-radius: 0.5rem;
 }
+.skills-img img#skill-logo { /* More specific selector for clarity */
+  max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
+  max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
+  object-fit: contain; /* Maintain aspect ratio and fit within the box */
+  justify-self: center;
+}
 
 /* -------------------- Portfolio Section Styles -------------------- */
 .portfolio {
@@ -299,13 +305,48 @@ img {
   justify-items: center;
   row-gap: 2rem;
 }
+.portfolio-item {
+  text-align: center;
+}
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+    margin-bottom: 10px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
 .portfolio-img {
   position: relative;
   overflow: hidden;
 }
 .portfolio-img img {
-  border-radius: 0.5rem;
+  border-radius: 8px; /* Slightly different radius from .skills-img, consolidated to 0.5rem for consistency in cleaned version */
+  max-width: 100%;
+  display: block; /* Ensuring images are block-level */
 }
+
+.portfolio-title a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.portfolio-title a:hover {
+  color: var(--first-color);
+}
+
 
 .portfolio-link {
   position: absolute;
@@ -316,7 +357,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
   cursor: pointer;
   backdrop-filter: blur(10px);
   transition: 0.3s;
@@ -328,6 +369,87 @@ img {
 .portfolio-link-color {
   color: var(--dark-color);
 }
+
+/* -------------------- Portfolio Detail Page Styles -------------------- */
+.portfolio-detail {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.portfolio-detail .portfolio-img img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.portfolio-detail-content {
+  text-align: left;
+  padding: 2rem;
+  background: floralwhite;
+}
+
+
+.portfolio-detail-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb2);
+  color: var(--dark-color);
+}
+
+.portfolio-detail-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: var(--mb3);
+}
+
+.portfolio-detail-images img {
+  max-width: 45%;
+  height: auto;
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
+}
+
+.portfolio-detail-process h4 {
+  font-size: var(--normal-font-size);
+  font-weight: bold;
+  margin-top: var(--mb2);
+  margin-bottom: var(--mb1);
+  color: var(--first-color);
+}
+
+.portfolio-detail-process p {
+  margin-bottom: var(--mb3);
+  text-align: left;
+}
+
+.portfolio-detail-description {
+  margin-bottom: var(--mb3);
+  text-align: justify;
+}
+
+
+.portfolio-detail-links {
+  margin-top: var(--mb3);
+}
+
+.portfolio-detail-links a, .portfolio-detail-button { /* Grouped styles for links and the button */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-right: var(--mb2);
+  margin-top: 8px; /* Added margin-top to .portfolio-detail-links a to match button */
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none; /* Reset border for button to ensure consistent appearance */
+  outline: none; /* Reset outline for button */
+  font-size: var(--normal-font-size); /* Ensure font-size is inherited or explicitly set */
+  cursor: pointer; /* Ensure cursor is a pointer for button */
+}
+
+.portfolio-detail-links a:hover, .portfolio-detail-button:hover {
+  background-color: var(--dark-color);
+}
+
 
 /* -------------------- Contact Section Styles -------------------- */
 .contact-container {
@@ -354,7 +476,7 @@ img {
   border: 1.5px solid var(--dark-color);
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb4);
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
 }
 
 .contact-button {
@@ -363,7 +485,7 @@ img {
   color: var(--white-color);
   padding: 0.75rem 2.5rem;
   margin-left: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
@@ -401,80 +523,11 @@ img {
   color: #fcbf49;
 }
 
-/* -------------------- Portfolio Detail Page Styles -------------------- */
-.portfolio-detail {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.portfolio-detail .portfolio-img img {
-  max-width: 80%;
-  border-radius: 10px;
-}
-
-.portfolio-content {
-  margin-top: 20px;
-  text-align: left;
-}
-
-/* -------------------- Portfolio Item Styles -------------------- */
-.portfolio-item {
-  text-align: center;
-}
-
-.portfolio-title a {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: var(--dark-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.portfolio-title a:hover {
-  color: var(--first-color);
-}
-
-/* -------------------- Portfolio Card Styles -------------------- */
-.portfolio-card {
-    background: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.portfolio-img img {
-    border-radius: 8px;
-    max-width: 100%;
-}
-
-.portfolio-title a {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: var(--dark-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.portfolio-title a:hover {
-    color: var(--first-color);
-}
-
 /* -------------------- Media Queries for responsive layout -------------------- */
 @media screen and (max-width: 768px) {
   .home-img {
     width: 350px;
-    bottom: -3.5vh;
+    bottom: 4.5vh;
     right: 0;
   }
 }
@@ -531,6 +584,7 @@ img {
   .home-img {
     width: 600px;
     right: 10%;
+
   }
 
   .about-container {
@@ -582,90 +636,25 @@ img {
   }
 }
 
-/* -------------------- Specific Skill Logo Image Style -------------------- */
-
-.skills-img img#skill-logo { /* More specific selector for clarity */
-  max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
-  max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
-  object-fit: contain; /* Maintain aspect ratio and fit within the box */
-  margin-left: 90px;
+/* -------------------- Portfolio Section Grid Styles (Homepage ONLY) -------------------- */
+@media screen and (min-width: 768px) {
+  .portfolio:not(.portfolio-detail-page) .portfolio-container.bd-grid { /* Homepage grid rule - SPECIFIC SELECTOR */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
 }
 
-/* style.css (add to your existing file) */
-
-.portfolio-detail-content {
-  text-align: left; /* Align detail content to the left */
-  padding: 2rem;
-}
-
-.portfolio-detail-title {
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb2);
-  color: var(--dark-color); /* Or your preferred title color */
-}
-
-.portfolio-detail-images {
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-  gap: 1rem; /* Spacing between images */
-  margin-bottom: var(--mb3);
-}
-
-.portfolio-detail-images img {
-  max-width: 45%; /* Adjust as needed, or use fixed widths */
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-.portfolio-detail-process h4 {
-  font-size: var(--normal-font-size);
-  font-weight: bold;
-  margin-top: var(--mb2);
-  margin-bottom: var(--mb1);
-  color: var(--first-color); /* Or your preferred heading color */
-}
-
-.portfolio-detail-process p {
-  margin-bottom: var(--mb3);
-  text-align: justify; /* Justify process text */
-}
-
-.portfolio-detail-description {
-  margin-bottom: var(--mb3);
-  text-align: justify;
-}
-
-
-.portfolio-detail-links {
-  margin-top: var(--mb3);
-}
-
-.portfolio-detail-links a {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-right: var(--mb2);
-  background-color: var(--first-color);
-  color: var(--white-color);
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.portfolio-detail-links a:hover {
-  background-color: var(--dark-color);
-}
-
-body:not(.homepage-portfolio-grid) .portfolio.section .portfolio-container.bd-grid { /* VERY SPECIFIC SELECTOR */ /* Or use .portfolio .portfolio-container if bd-grid is not always present */
-  display: block; /* Change display to block to remove grid */
-  width: 95%;     /* Take full width */
+/* -------------------- Portfolio Detail Page Styles (No Grid) -------------------- */
+.portfolio.portfolio-detail-page .portfolio-container.bd-grid { /* Detail page no-grid rule - SPECIFIC SELECTOR */
+  display: block;
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: floralwhite;
   border-radius: 15px;
-  max-width: none; /* Remove max-width */
-  margin-left: 5;  /* Reset margins */
-  margin-right: 5;
-  padding-left: 0;
-  padding-right: 0;
-  grid-template-columns: none; /* Reset grid properties */
+  grid-template-columns: none;
   grid-template-rows: none;
   column-gap: 0;
   row-gap: 0;
@@ -673,24 +662,8 @@ body:not(.homepage-portfolio-grid) .portfolio.section .portfolio-container.bd-gr
   align-items: initial;
 }
 
-
-
-/* style.css - Optional button styling */
-
-.portfolio-detail-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-right: var(--mb2);
-  margin-top: 8px;
-  background-color: var(--first-color);
-  color: var(--white-color);
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-
-.portfolio-detail-button:hover {
-  background-color: var(--dark-color); /* Darken on hover */
-  cursor: pointer;
+/* Adjustments for portfolio detail content within the no-grid container */
+.portfolio.portfolio-detail-page .portfolio-detail-content {
+    text-align: left;
+    padding: 2rem;
 }
