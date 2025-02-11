@@ -1,5 +1,3 @@
-/* style.css */
-
 /* -------------------- Import Google Font -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -111,7 +109,7 @@ img {
 .bd-grid {
   max-width: 1024px;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 98%;
   grid-column-gap: 2rem;
   width: calc(100% - 2rem);
   margin-left: var(--mb2);
@@ -290,10 +288,10 @@ img {
 .skills-img img {
   border-radius: 0.5rem;
 }
-.skills-img img#skill-logo { /* More specific selector for clarity */
-  max-width: 248px;   /* Set the maximum width to 248 pixels (half of 496) */
-  max-height: 186px;  /* Set the maximum height to 186 pixels (half of 372) */
-  object-fit: contain; /* Maintain aspect ratio and fit within the box */
+.skills-img img#skill-logo { 
+  max-width: 248px;   
+  max-height: 186px;  
+  object-fit: contain; 
   justify-self: center;
 }
 
@@ -450,6 +448,37 @@ img {
   background-color: var(--dark-color);
 }
 
+/* -------------------- Portfolio Section Grid Styles (Homepage ONLY) -------------------- */
+@media screen and (min-width: 768px) {
+  .portfolio:not(.portfolio-detail-page) .portfolio-container.bd-grid { /* Homepage grid rule - SPECIFIC SELECTOR */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
+}
+
+/* -------------------- Portfolio Detail Page Styles (No Grid) -------------------- */
+.portfolio.portfolio-detail-page .portfolio-container.bd-grid { /* Detail page no-grid rule - SPECIFIC SELECTOR */
+  display: block;
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: floralwhite;
+  border-radius: 15px;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  column-gap: 0;
+  row-gap: 0;
+  justify-items: initial;
+  align-items: initial;
+}
+
+/* Adjustments for portfolio detail content within the no-grid container */
+.portfolio.portfolio-detail-page .portfolio-detail-content {
+    text-align: left;
+    padding: 2rem;
+}
 
 /* -------------------- Contact Section Styles -------------------- */
 .contact-container {
@@ -634,36 +663,4 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-/* -------------------- Portfolio Section Grid Styles (Homepage ONLY) -------------------- */
-@media screen and (min-width: 768px) {
-  .portfolio:not(.portfolio-detail-page) .portfolio-container.bd-grid { /* Homepage grid rule - SPECIFIC SELECTOR */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    column-gap: 2rem;
-  }
-}
-
-/* -------------------- Portfolio Detail Page Styles (No Grid) -------------------- */
-.portfolio.portfolio-detail-page .portfolio-container.bd-grid { /* Detail page no-grid rule - SPECIFIC SELECTOR */
-  display: block;
-  width: 95%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: floralwhite;
-  border-radius: 15px;
-  grid-template-columns: none;
-  grid-template-rows: none;
-  column-gap: 0;
-  row-gap: 0;
-  justify-items: initial;
-  align-items: initial;
-}
-
-/* Adjustments for portfolio detail content within the no-grid container */
-.portfolio.portfolio-detail-page .portfolio-detail-content {
-    text-align: left;
-    padding: 2rem;
 }

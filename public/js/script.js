@@ -108,15 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// js/script.js
-
-// ... your existing script.js code ...
-
 function closeDetailPageTab() {
     window.close(); // Try to close the current tab
-
-    // Optional: Alert to guide user back to homepage tab (if window.close() is blocked)
-    //  setTimeout(() => { // Delay to allow window.close() attempt
-    //      alert("This detail page tab should now be closing. If it doesn't close automatically, please close it manually and return to the main portfolio tab.");
-    //  }, 100);
 }
