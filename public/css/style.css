@@ -138,7 +138,7 @@ img {
 }
 .nav-link {
   position: relative;
-  color: var(--dark-color);
+  color: black;
 }
 .nav-link:hover {
   color: var(--first-color);
@@ -291,6 +291,7 @@ img {
 .skills-img img#skill-logo { 
   max-width: 248px;   
   max-height: 186px;  
+  margin-bottom: 2rem;
   object-fit: contain; 
   justify-self: center;
 }
@@ -300,23 +301,29 @@ img {
   background-color: var(--white-color);
 }
 .portfolio-container {
-  justify-items: center;
-  row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for responsiveness */
+  justify-content: center; /* Center items horizontally */
+  gap: 2rem; /* Use gap for spacing between items in both rows and columns */
 }
 .portfolio-item {
   text-align: center;
+  width: calc(33.33% - 2rem); /* Roughly one-third width for larger screens, adjust as needed */
+  margin-bottom: 2rem; /* Add bottom margin for spacing between rows */
 }
 .portfolio-card {
-    background: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    text-align: center;
-    margin-bottom: 10px;
-    height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  margin-bottom: 0; /* Reset margin-bottom from previous context if needed */
+  height: 100%;
+  display: flex; /* To make .portfolio-card a flex container if you need vertical alignment inside */
+  flex-direction: column; /* Stack content vertically inside the card */
+  justify-content: space-between; /* Example: Distribute space between image and title */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .portfolio-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
@@ -382,7 +389,10 @@ img {
 .portfolio-detail-content {
   text-align: left;
   padding: 2rem;
+  padding-top:12px;
   background: floralwhite;
+  margin-bottom:21px;
+  border-radius: 16px;
 }
 
 
@@ -448,36 +458,28 @@ img {
   background-color: var(--dark-color);
 }
 
-/* -------------------- Portfolio Section Grid Styles (Homepage ONLY) -------------------- */
-@media screen and (min-width: 768px) {
-  .portfolio:not(.portfolio-detail-page) .portfolio-container.bd-grid { /* Homepage grid rule - SPECIFIC SELECTOR */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    column-gap: 2rem;
-  }
-}
 
 /* -------------------- Portfolio Detail Page Styles (No Grid) -------------------- */
 .portfolio.portfolio-detail-page .portfolio-container.bd-grid { /* Detail page no-grid rule - SPECIFIC SELECTOR */
-  display: block;
+  display: block; /* Keep it as block for detail page */
   width: 95%;
   max-width: 1024px;
   margin: 0 auto;
   padding: 20px;
   background-color: floralwhite;
   border-radius: 15px;
-  grid-template-columns: none;
-  grid-template-rows: none;
-  column-gap: 0;
-  row-gap: 0;
+  grid-template-columns: none; /* Remove grid specific properties */
+  grid-template-rows: none;   /* Remove grid specific properties */
+  column-gap: 0;             /* Remove grid specific properties */
+  row-gap: 0;                /* Remove grid specific properties */
   justify-items: initial;
   align-items: initial;
 }
 
 /* Adjustments for portfolio detail content within the no-grid container */
 .portfolio.portfolio-detail-page .portfolio-detail-content {
-    text-align: left;
-    padding: 2rem;
+  text-align: left;
+  padding: 2rem;
 }
 
 /* -------------------- Contact Section Styles -------------------- */
@@ -638,11 +640,7 @@ img {
     align-items: center;
   }
 
-  .portfolio-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 2rem;
-  }
+
 
   .contact-container {
     grid-template-columns: repeat(2, 1fr);
@@ -662,5 +660,17 @@ img {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-item {
+      width: calc(50% - 2rem); /* Two items per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 500px) { /* Even smaller screens */
+  .portfolio-item {
+      width: 100%; /* One item per row on very small screens */
   }
 }
