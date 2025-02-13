@@ -6,7 +6,7 @@ const portfolioItems = [
         image: "/images/portfolio/oursos-hifi.png",
         images: [ // Added detail images - you can add paths to more images here
             "/images/portfolio/oursos-hifi.png", // Example detail image path
-            "images/portfolio/oursos-detail-2.png"  // Example detail image path
+            "/images/portfolio/oursos-hifi.png"  // Example detail image path
             // ... more detail images for OurSOS ...
         ],
         description: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.",
