@@ -8,5 +8,5 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Send request to keep app warm
-        run: curl -s https://pschwendeman.ca > /dev/null
+      - name: Send request and log response
+        run: curl -v https://your-portfolio-url.com
