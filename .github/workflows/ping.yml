@@ -3,10 +3,11 @@ name: Keep Render App Warm
 on:
   schedule:
     - cron: '*/25 * * * *'  # Runs every 25 minutes
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Send request and log response
-        run: curl -v https://your-portfolio-url.com
+      - name: Send request to keep app warm
+        run: curl -s https://pschwendeman.ca > /dev/null
