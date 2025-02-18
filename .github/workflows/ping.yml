@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send request to keep app warm
-        run: curl -s https://pschwendeman.ca > /dev/null
+        run: curl -s https://parker-schwendeman-portfolio.onrender.com/ > /dev/null
