@@ -558,7 +558,7 @@ img {
 @media screen and (max-width: 768px) {
   .home-img {
     width: 350px;
-    bottom: 15.5vh;
+    bottom: 11.5vh;
     right: 0;
   }
 }
