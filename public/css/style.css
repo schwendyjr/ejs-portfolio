@@ -171,7 +171,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: rgba(255, 244, 244, 0.3);
+    background-color: floralwhite;
     transition: 0.5s;
     backdrop-filter: blur(10px);
   }
@@ -558,7 +558,7 @@ img {
 @media screen and (max-width: 768px) {
   .home-img {
     width: 350px;
-    bottom: 4.5vh;
+    bottom: 15.5vh;
     right: 0;
   }
 }
@@ -672,5 +672,75 @@ img {
 @media screen and (max-width: 500px) { /* Even smaller screens */
   .portfolio-item {
       width: 100%; /* One item per row on very small screens */
+  }
+}
+
+.exit-button {
+  position: absolute;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+.exit-button img {
+  width: 70px; /* Adjust size as needed */
+  border-radius: 10px;
+  opacity: 1;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Small shadow */
+}
+
+/* Hide button on small screens */
+@media (max-width: 767px) {
+  .exit-button {
+      display: none;
+  }
+}
+
+.led-light {
+  width: 15px;  /* Adjust size of the LED light */
+  height: 15px;
+  opacity: 80%;
+  margin-top: 3px;
+  margin-left: -380px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Add hover effect to LED light */
+.led-light:hover {
+  transform: scale(1.2); /* Slightly enlarge the LED light when hovered */
+
+}
+
+/* Tooltip styling */
+.led-light[title] {
+  position: relative;
+}
+
+.led-light[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .led-light {
+      display: none;
   }
 }

@@ -111,3 +111,54 @@ document.addEventListener('DOMContentLoaded', () => {
 function closeDetailPageTab() {
     window.close(); // Try to close the current tab
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("leaveButton");
+
+    // Hide the button on small screens
+    if (window.innerWidth < 768) {
+        button.style.display = "none";
+        return;
+    }
+
+    // Ensure the button has absolute positioning
+    button.style.position = "absolute"; 
+
+    // Set initial position: 20% from top, 80% from left
+    button.style.top = `${window.innerHeight * 0.2}px`;
+    button.style.left = `${window.innerWidth * 0.8}px`;
+
+    // Get the nav bar height dynamically
+    const navBar = document.querySelector("nav"); // Adjust selector if needed
+    const navHeight = navBar ? navBar.offsetHeight + 10 : 50; // Default to 50px if no nav found
+
+    // Define margins to prevent button from getting stuck at screen edges
+    const margin = 100; // Adjust this value for more spacing from the edges
+
+    document.addEventListener("mousemove", (event) => {
+        const buttonRect = button.getBoundingClientRect();
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const threshold = 100; // Distance at which the button starts moving
+        const speed = 75; // Adjust movement speed
+
+        if (
+            mouseX > buttonRect.left - threshold &&
+            mouseX < buttonRect.right + threshold &&
+            mouseY > buttonRect.top - threshold &&
+            mouseY < buttonRect.bottom + threshold
+        ) {
+            let newX = button.offsetLeft + (mouseX > buttonRect.left ? -speed : speed);
+            let newY = button.offsetTop + (mouseY > buttonRect.top ? -speed : speed);
+
+            // Constrain movement within the viewport (Left, Right, Top [below nav], Bottom)
+            newX = Math.max(margin, Math.min(window.innerWidth - buttonRect.width - margin, newX));
+            newY = Math.max(navHeight, Math.min(window.innerHeight - buttonRect.height - margin, newY));
+
+            button.style.left = `${newX}px`;
+            button.style.top = `${newY}px`;
+        }
+    });
+});
+
