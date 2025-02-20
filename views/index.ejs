@@ -208,12 +208,12 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form action="" class="contact-form">
+                <form action="/send-email" method="POST" class="contact-form">
                     <div class="contact-inputs">
-                        <input type="text" placeholder="Name" class="contact-input">
-                        <input type="email" placeholder="Email" class="contact-input">
+                        <input type="text" name="name" placeholder="Name" class="contact-input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact-input" required>
                     </div>
-                    <textarea name="" id="" cols="0" rows="10" placeholder="Your Message" class="contact-input"></textarea>
+                    <textarea name="message" cols="0" rows="10" placeholder="Your Message" class="contact-input" required></textarea>
                     <input type="submit" value="Send" class="contact-button">
                 </form>
             </div>
