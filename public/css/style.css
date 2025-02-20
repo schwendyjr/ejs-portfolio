@@ -64,6 +64,7 @@ h1,
 h2,
 p {
   margin: 0;
+  text-align: left;
 }
 ul {
   margin: 0;
@@ -316,7 +317,7 @@ img {
   padding: 15px;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  text-align: center;
+  text-align: left;
   margin-bottom: 0; /* Reset margin-bottom from previous context if needed */
   height: 100%;
   display: flex; /* To make .portfolio-card a flex container if you need vertical alignment inside */

@@ -1,123 +1,124 @@
 // data.js
 const portfolioItems = [
     {
-        id: "oursos", // Modified ID to be unique and lowercase, good for URLs/code
-        title: "OurSOS - Your Lifeline in Times of Crisis",
-        image: "/images/portfolio/oursos-hifi.png",
-        images: [ // Added detail images - you can add paths to more images here
-            "/images/portfolio/oursos-hifi.png", // Example detail image path
-            "/images/portfolio/oursos-hifi.png"  // Example detail image path
-            // ... more detail images for OurSOS ...
+        id: "react-weather-app",
+        title: "React Weather App: Developing an Intuitive and Responsive Weather Forecast Interface",
+        image: "/images/portfolio/react-weather-app-mockup.png", // Placeholder image path
+        images: [
+            "/images/portfolio/react-weather-app-desktop-ui.png", // Placeholder detail image path
+            "/images/portfolio/react-weather-app-mobile-ui.png", // Placeholder detail image path
+            "/images/portfolio/react-weather-app-code-snippet.png" // Placeholder for code snippet
+            // ... more detail images for React Weather App ...
         ],
-        description: "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.",
-        processHeadings: ["Overview", "Challenge", "Goal", "Key Features"], // Example process headings
+        description: "This project involved the end-to-end development of a React-based weather application.  The focus was on building a functional and user-friendly interface that provides easy access to real-time weather data. Key considerations included responsiveness across devices and a clean, intuitive user experience.",
+        processHeadings: ["Project Objective", "Development Approach", "Technical Skills"],
         processContent: [
-            "OurSOS is a mobile application designed to provide a platform for users to seek and offer help during local emergencies. It empowers communities to respond quickly and effectively to crises.",
-            "The challenge was to create a real-time, community-driven emergency information system to address slow response times in local crises.",
-            "The goal was to develop a mobile platform for rapid reporting and dissemination of emergency information, fostering faster community response and improved safety.",
-            "Key features include user-friendly emergency reporting, real-time map visualization, and intuitive design for ease of use during stressful situations." // Summarized details as key features
+            "The focus was on building a functional and user-friendly interface that provides easy access to real-time weather data with key considerations including responsiveness across devices and a clean, intuitive user experience.",
+            "Utilizing React.js for the frontend development, I built a dynamic and responsive application that visually presents weather information in a clear and digestible format.",
+            "Frontend Web Design & Development (React.js), UI/UX Design for Web Applications, Responsive Design & Web Technologies (HTML, CSS, JavaScript, React)"
         ],
         links: {
-            liveDemo: "https://example.com/oursos-demo", // Example demo link - replace with actual if available
-            // github: "https://github.com/your-repo/oursos" // Add GitHub link if applicable
+            liveDemo: "https://comp-3170-project-chi.vercel.app/", // Add actual demo link if available
+    
+            github: "https://github.com/schwendyjr/COMP3170-Project"  // Add GitHub link if applicable
         }
     },
     {
-        id: "anderson-grant-brochure", // Modified ID for uniqueness
-        title: "Anderson Grant - Interior Design Brochure",
-        image: "images/portfolio/brochure-mockup.jpg",
-        images: [ // Detail images for brochure
-            "images/portfolio/brochure-detail-1.jpg", // Example detail image path
-            "images/portfolio/brochure-detail-2.jpg"  // Example detail image path
+        id: "full-stack-portfolio-website",
+        title: "Full Stack Portfolio Website: Designing and Developing My Digital Showcase",
+        image: "/images/portfolio/portfolio-website-project-page.png",
+        images: [
+            "/images/portfolio/portfolio-website-project-page.png", // Placeholder detail image path
+            "/images/portfolio/portfolio-website-homepage.png", // Placeholder detail image path
+            // ... more detail images for Portfolio Website ...
+        ],
+        description: "This portfolio website itself serves as a project, showcasing the culmination of my design and development capabilities.  Designed and developed from the ground up, it is a dynamic and interactive platform to present my work and skills to potential clients and employers.",
+        processHeadings: ["Project Purpose", "Development Scope", "Skills Utilized"],
+        processContent: [
+            "This portfolio website itself serves as a project, designed to be a dynamic and interactive platform to present my design and development work to potential clients and employers.",
+            "Designed and developed from the ground up as a fully functional, self-built website, showcasing both frontend and backend development capabilities.",
+            "Full Stack Web Design & Development, Web Design & UI/UX (Portfolio Specific), Self-Marketing & Personal Branding (Digital Presence)"
+        ],
+        links: {
+            liveDemo: "https://parker-schwendeman-portfolio.onrender.com/", // Add your actual portfolio website URL
+            github: "https://github.com/schwendyjr/ejs-portfolio" // Add GitHub link if applicable
+        }
+    },
+    {
+        id: "oursos",
+        title: "OurSOS: Designing Resilience - An AI-Driven Disaster Reporting Application",
+        image: "/images/portfolio/oursos-logo.png", // Placeholder image path
+        images: [
+            "/images/portfolio/oursos-app-detail-2.png", // Placeholder detail image path
+            "/images/portfolio/oursos-hifi.png",       // Placeholder for logo detail
+            "/images/portfolio/oursos-style-guide.png",
+            "/images/portfolio/oursos-dieline.png" 
+        ],
+        description: "OurSOS is an AI-powered mobile application designed to provide real-time disaster reporting to underserved communities.  Prompted by the question 'how to use AI to help under served communities,' the core idea was to create a real-time disaster reporting tool, translatable into any language, ensuring loved ones stay safe and informed during critical times.",
+        processHeadings: ["Project Overview", "My Role", "Skills Highlighted"],
+        processContent: [
+            "OurSOS was conceived as an AI-powered mobile application designed to provide real-time disaster reporting to underserved communities. The project was prompted by the question: 'How can AI be leveraged to assist underserved communities?' with the aim of creating a multilingual application to disseminate vital disaster information.",
+            "As the Lead Designer, I spearheaded project ideation and audience research, translated concepts into tangible Figma designs – from low-fidelity wireframes to high-fidelity mockups – and collaborated closely with a development team throughout the product creation process.  We even pitched OurSOS to influential figures at BCIT, including the Mayor.",
+            "UI/UX Design, Project Management, Ideation & Research, Branding & Visual Identity, Agile Collaboration, Problem Solving with AI"
+        ],
+        links: {
+            // liveDemo: "https://example.com/oursos-demo", // Add actual demo link if available
+            // github: "https://github.com/your-repo/oursos"  // Add GitHub link if applicable
+        }
+    },
+    {
+        id: "sunset-sippers-can-design",
+        title: "Sunset Sippers: Refreshing Brand Identity through Can Design",
+        image: "/images/portfolio/sunset-sippers-dielinee.png", // Placeholder image path
+        images: [
+            "/images/portfolio/sunset-sippers-can-detail-1.png", // Placeholder detail image path
+            "/images/portfolio/sunset-sippers-brand-palette.png", // Placeholder detail image path
+            // ... more detail images for Sunset Sippers ...
+        ],
+        description: "Sunset Sippers was a self-initiated project exploring brand identity through beverage can design.  This project focused on creating a visually appealing and memorable aesthetic for a beverage product, aiming to capture a sense of relaxation and enjoyment.",
+        processHeadings: ["Project Overview", "My Contribution", "Key Skills"],
+        processContent: [
+            "Sunset Sippers was a personal project focused on exploring brand identity and packaging design within the beverage industry. The goal was to create a vibrant and memorable can design that evoked relaxation and enjoyment, positioning it as a desirable lifestyle beverage.",
+            "I developed the complete visual language for the 'Sunset Sippers' brand, translating that into eye-catching can designs ready for production.",
+            "Graphic Design for Packaging, Brand Identity Development, Visual Communication for Marketing"
+        ],
+        links: {} // No links for design-focused project
+    },
+    {
+        id: "anderson-grant-brochure",
+        title: "Anderson Grant Interior Photography: Brochure Design to Showcase Elegance",
+        image: "/images/portfolio/anderson-grant-brochure-spread-1.png", // Placeholder image path
+        images: [
+            "/images/portfolio/anderson-grant-brochure-spread-1.png", // Placeholder detail image path
+            "/images/portfolio/anderson-grant-brochure-typography.png", // Placeholder detail image path
             // ... more detail images for Anderson Grant Brochure ...
         ],
-        description: "A visually appealing and informative brochure designed for Anderson Grant Interior Design to showcase their services and aesthetic.", // More descriptive overview
-        processHeadings: ["Project Overview", "Client", "Target Audience", "Design Challenge", "Design Solution"], // Example process headings tailored to design project
+        description: "For Anderson Grant Interior Photography, the objective was to design a high-end brochure that would effectively market their premium photography services to discerning clients. The key challenge was to create a design that complemented the sophisticated nature of interior photography and communicated a sense of luxury and professionalism.",
+        processHeadings: ["Project Goal", "Design Approach", "Skills Applied"],
         processContent: [
-            "Creation of a professional interior design brochure for Anderson Grant.",
-            "Anderson Grant Interior Design",
-            "Potential clients interested in high-end interior design services.",
-            "To develop a brochure that effectively communicates Anderson Grant's design style and services to attract new clients.",
-            "A multi-page brochure featuring high-quality imagery, clear service descriptions, and elegant typography to reflect Anderson Grant's brand." // Summarized details as design solution
+            "The objective was to craft a brochure for Anderson Grant Interior Photography to showcase their stunning portfolio and attract discerning clients, requiring a design that complemented the high-quality photography while effectively communicating the brand's sophistication.",
+            "I designed a brochure that prioritized visual impact, using clean, elegant typography, refined layouts, and ample white space to enhance the photography and communicate the brand’s sophisticated aesthetic.",
+            "Graphic Design for Print, Layout Design & Typography for Print, Marketing Collateral Design"
         ],
-        links: {
-            // No live demo or GitHub for a brochure, leave empty or add a Behance/portfolio link if applicable
-        }
+        links: {} // No links for brochure project
     },
     {
-        id: "tradesquare", // Modified ID to be unique
-        title: "Tradesquare - Community Marketplace",
-        image: "images/portfolio/Tradesquare-mockup.png",
-        images: [ // Detail images for Tradesquare
-            "images/portfolio/tradesquare-detail-1.png", // Example detail image path
-            "images/portfolio/tradesquare-detail-2.png"  // Example detail image path
-            // ... more detail images for Tradesquare ...
+        id: "canal-house-magazine",
+        title: "Canal House: Designing a Captivating Editorial Experience for Architecture Enthusiasts",
+        image: "/images/portfolio/canal-house-magazine-mockup.jpg", // Placeholder image path
+        images: [
+            "/images/portfolio/canal-house-magazine-spread-1.jpg", // Placeholder detail image path
+            "/images/portfolio/canal-house-magazine-layout-grid.jpg", // Placeholder detail image path
+            // ... more detail images for Canal House Magazine ...
         ],
-        description: "Tradesquare is an online community marketplace connecting local tradespeople with customers seeking their services.",
-        processHeadings: ["Project Goal", "Target Users", "Key Features", "Technology Stack"], // Example process headings for a marketplace app
+        description: "The 'Canal House' architecture magazine project was an exploration of editorial design and visual storytelling within the architecture domain. The aim was to create a visually engaging magazine layout that was both aesthetically pleasing and structurally sound, effectively showcasing featured architectural projects and articles.",
+        processHeadings: ["Project Aim", "Design Solution", "Expertise Demonstrated"],
         processContent: [
-            "To build a community marketplace platform that efficiently connects tradespeople and customers.",
-            "Homeowners, renters, and local trades professionals (plumbers, electricians, carpenters, etc.).",
-            "User profiles for tradespeople, service request posting for customers, search and filtering, direct messaging, and review system.", // Summarized details as key features
-            "React, Node.js, Express, MongoDB (Example stack - replace with actual)" // Example tech stack - replace with actual
+            "The 'Canal House' architecture magazine project was an exercise in editorial design and visual storytelling within the realm of architectural aesthetics. The goal was to create a magazine layout that was both visually engaging and structurally sound, allowing the featured architecture and articles to shine.",
+            "I focused on developing a dynamic and visually rich magazine layout that incorporated striking imagery, clear typography, and a consistent visual identity throughout.",
+            "Editorial & Magazine Design, Visual Storytelling through Layout, Typography & Composition for Readability"
         ],
-        links: {
-            liveDemo: "https://tradesquare-demo.example.com", // Example demo link - replace with actual
-            // github: "https://github.com/your-repo/tradesquare" // Add GitHub link if applicable
-        }
-    },
-    {
-        id: "project-4", // Assuming you want to keep the duplicate project, I've made the ID unique
-        title: "OurSOS - Your Lifeline in Times of Crisis (Duplicate Example)", // Clarified as duplicate for distinction
-        image: "images/portfolio/oursos-hifi.png",
-        images: [], // You can add different detail images for this duplicate if needed
-        description: "This is a duplicate entry for OurSOS, used to demonstrate handling multiple projects. You can have different details here if needed for variations of the project.", // Description to differentiate duplicate
-        processHeadings: ["Concept", "Design", "Development", "Testing"], // Different process headings for example
-        processContent: [
-            "Initial concept and ideation phase for the OurSOS application.",
-            "UI/UX design process including wireframing and prototyping.",
-            "Front-end and back-end development using React Native and Firebase (example).", // Example technologies
-            "User testing and quality assurance phase before launch."
-        ],
-        links: {
-            // liveDemo: "...", // If a different demo link for this variation
-            // github: "..."  // If a different repo
-        }
-    },
-    {
-        id: "project-5", // Unique ID for the second brochure project
-        title: "Anderson Grant - Interior Design Brochure (Duplicate Example)", // Clarified as duplicate
-        image: "images/portfolio/brochure-mockup.jpg",
-        images: [], // Detail images if different from the first brochure
-        description: "Another example of the Anderson Grant brochure, perhaps a different iteration or style. Demonstrates handling similar project types.", // Description to differentiate
-        processHeadings: ["Objective", "Audience", "Visual Style", "Content Strategy"], // Different headings for brochure example
-        processContent: [
-            "To create marketing collateral for Anderson Grant.",
-            "High-net-worth individuals, luxury homeowners.",
-            "Elegant, minimalist, and sophisticated visual approach.",
-            "Showcase portfolio, service descriptions, contact information."
-        ],
-        links: {
-            // No links, or link to a different online version if applicable
-        }
-    },
-    {
-        id: "project-6", // Unique ID for the second Tradesquare project
-        title: "Tradesquare - Community Marketplace (Duplicate Example)", // Clarified as duplicate
-        image: "images/portfolio/Tradesquare-mockup.png",
-        images: [], // Detail images if different
-        description: "A variation of the Tradesquare project, possibly a different version or platform (e.g., web app instead of mobile).", // Description to differentiate
-        processHeadings: ["Platform", "Features Focus", "Monetization", "Development Timeline"], // Different headings
-        processContent: [
-            "Web-based platform for Tradesquare marketplace.", // Different platform
-            "Focus on user reviews and rating system.", // Different feature focus
-            "Commission-based monetization model.", // Different aspect
-            "Estimated 6-month development timeline." // Different detail
-        ],
-        links: {
-            // liveDemo: "...", // Different demo link if applicable
-            // github: "..."  // Different repo if applicable
-        }
+        links: {} // No links for magazine project
     },
 ];
 
