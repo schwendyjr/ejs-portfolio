@@ -5,9 +5,7 @@ const portfolioItems = [
         title: "React Weather App: Developing an Intuitive and Responsive Weather Forecast Interface",
         image: "/images/portfolio/react-weather-app-mockup.png", // Placeholder image path
         images: [
-            "/images/portfolio/react-weather-app-desktop-ui.png", // Placeholder detail image path
-            "/images/portfolio/react-weather-app-mobile-ui.png", // Placeholder detail image path
-            "/images/portfolio/react-weather-app-code-snippet.png" // Placeholder for code snippet
+            "/images/portfolio/react-weather-app-mockup.png", // Placeholder detail image path
             // ... more detail images for React Weather App ...
         ],
         description: "This project involved the end-to-end development of a React-based weather application.  The focus was on building a functional and user-friendly interface that provides easy access to real-time weather data. Key considerations included responsiveness across devices and a clean, intuitive user experience.",
@@ -49,9 +47,7 @@ const portfolioItems = [
         title: "OurSOS: Designing Resilience - An AI-Driven Disaster Reporting Application",
         image: "/images/portfolio/oursos-logo.png", // Placeholder image path
         images: [
-            "/images/portfolio/oursos-app-detail-2.png", // Placeholder detail image path
-            "/images/portfolio/oursos-hifi.png",       // Placeholder for logo detail
-            "/images/portfolio/oursos-style-guide.png",
+            "/images/portfolio/oursos-logo.png",
             "/images/portfolio/oursos-dieline.png" 
         ],
         description: "OurSOS is an AI-powered mobile application designed to provide real-time disaster reporting to underserved communities.  Prompted by the question 'how to use AI to help under served communities,' the core idea was to create a real-time disaster reporting tool, translatable into any language, ensuring loved ones stay safe and informed during critical times.",
@@ -69,11 +65,10 @@ const portfolioItems = [
     {
         id: "sunset-sippers-can-design",
         title: "Sunset Sippers: Refreshing Brand Identity through Can Design",
-        image: "/images/portfolio/sunset-sippers-dielinee.png", // Placeholder image path
+        image: "/images/portfolio/sunset-sippers-dielineee.png", // Placeholder image path
         images: [
-            "/images/portfolio/sunset-sippers-can-detail-1.png", // Placeholder detail image path
-            "/images/portfolio/sunset-sippers-brand-palette.png", // Placeholder detail image path
-            // ... more detail images for Sunset Sippers ...
+            "/images/portfolio/sunset-sippers-dielinee.png", // Placeholder detail image path
+            "/images/portfolio/sunset-sippers-dieline.png", // Placeholder detail image path            
         ],
         description: "Sunset Sippers was a self-initiated project exploring brand identity through beverage can design.  This project focused on creating a visually appealing and memorable aesthetic for a beverage product, aiming to capture a sense of relaxation and enjoyment.",
         processHeadings: ["Project Overview", "My Contribution", "Key Skills"],
@@ -90,7 +85,7 @@ const portfolioItems = [
         image: "/images/portfolio/anderson-grant-brochure-spread-1.png", // Placeholder image path
         images: [
             "/images/portfolio/anderson-grant-brochure-spread-1.png", // Placeholder detail image path
-            "/images/portfolio/anderson-grant-brochure-typography.png", // Placeholder detail image path
+            "/images/portfolio/anderson-grant-brochure-spread-2.png", // Placeholder detail image path
             // ... more detail images for Anderson Grant Brochure ...
         ],
         description: "For Anderson Grant Interior Photography, the objective was to design a high-end brochure that would effectively market their premium photography services to discerning clients. The key challenge was to create a design that complemented the sophisticated nature of interior photography and communicated a sense of luxury and professionalism.",

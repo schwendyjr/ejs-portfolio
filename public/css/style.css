@@ -76,9 +76,9 @@ a {
   color: var(--text-color2);
 }
 img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Changed from 'inside' to 'block' for consistency and to avoid potential issues with layout */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* -------------------- Reusable Section Styles -------------------- */
