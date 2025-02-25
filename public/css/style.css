@@ -719,6 +719,8 @@ img {
   vertical-align: middle;
   cursor: pointer;
   transition: transform 0.3s ease;
+  box-shadow: 0px 0px 14px rgb(144 223 101 / 80%);
+    border-radius: 50%; /* Ensures a circular shape */
 }
 
 /* Optional: Add hover effect to LED light */
