@@ -131,7 +131,7 @@
                     <div class="portfolio-detail-content">
                         <h3 class="portfolio-detail-title"><%= project.title %></h3>
 
-                        <!-- Display Project Images (assuming project.images is an array) -->
+                        <!-- Display Project Images -->
                         <% if (project.images && project.images.length > 0) { %>
                             <div class="portfolio-detail-images">
                                 <% project.images.forEach(image => { %>
@@ -139,7 +139,7 @@
                                 <% }); %>
                             </div>
                         <% } else { %>
-                            <img src="<%= project.image %>" alt="<%= project.title %>"> <!-- Fallback to thumbnail if no detail images -->
+                            <img src="<%= project.image %>" alt="<%= project.title %>"> 
                         <% } %>
 
                         <!-- Project Process/Description (using headings as requested) -->
