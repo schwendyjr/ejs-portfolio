@@ -558,10 +558,17 @@ img {
 /* -------------------- Media Queries for responsive layout -------------------- */
 @media screen and (max-width: 768px) {
   .home-img {
-    width: 350px;
-    bottom: 11.5vh;
-    right: 0;
+    width: 386px;
+    bottom: 9.5vh;
+    right: -54px;
+    height: 71%;
   }
+}
+
+.portfolio-detail-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Consolidated radius to be consistent */
 }
 
 @media screen and (min-width: 768px) {
