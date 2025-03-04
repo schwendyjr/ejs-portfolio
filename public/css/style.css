@@ -711,15 +711,15 @@ img {
 }
 
 .led-light {
-  width: 15px;  /* Adjust size of the LED light */
-  height: 15px;
+  width: 13px;  /* Adjust size of the LED light */
+  height: 13px;
   opacity: 80%;
   margin-top: 3px;
   margin-left: -380px;
   vertical-align: middle;
   cursor: pointer;
   transition: transform 0.3s ease;
-  box-shadow: 0px 0px 14px rgb(144 223 101 / 80%);
+  box-shadow: 0px 0px 21px rgb(144 223 101 / 80%);
     border-radius: 50%; /* shadow for light effect*/
 }
 
