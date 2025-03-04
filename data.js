@@ -48,17 +48,25 @@ const portfolioItems = [
         image: "/images/portfolio/oursos-logo.png", // Placeholder image path
         images: [
             "/images/portfolio/oursos-logo.png",
-            "/images/portfolio/oursos-dieline.png" 
+            "/images/portfolio/oursos-group-photo.jpg",
+            "/images/portfolio/oursos-tutorial.png",
+            "/images/portfolio/oursos-hifi2.png",
+            
+
+
+
+            "/images/portfolio/oursos-dieline.png",
         ],
         description: "OurSOS is an AI-powered mobile application designed to provide real-time disaster reporting to underserved communities.  Prompted by the question 'how to use AI to help under served communities,' the core idea was to create a real-time disaster reporting tool, translatable into any language, ensuring loved ones stay safe and informed during critical times.",
-        processHeadings: ["Project Overview", "My Role", "Skills Highlighted"],
+        processHeadings: ["The Problem","Project Overview", "My Role", "Skills Highlighted"],
         processContent: [
+            "In our globally connected world, safety issues often cross borders and language divides. Yet, many emergency alert systems fall short for people in unfamiliar places or struggling with language barriers during emergencies. Getting real-time updates in a language you understand can be tough, resulting in confusion, stress, and even risky situations. Seeing this gap in safety communication, our team created a solution to deliver seamless access to emergency information, no matter where you are or what language you speak.",
             "OurSOS was conceived as an AI-powered mobile application designed to provide real-time disaster reporting to underserved communities. The project was prompted by the question: 'How can AI be leveraged to assist underserved communities?' with the aim of creating a multilingual application to disseminate vital disaster information.",
             "As the Lead Designer, I spearheaded project ideation and audience research, translated concepts into tangible Figma designs – from low-fidelity wireframes to high-fidelity mockups – and collaborated closely with a development team throughout the product creation process.  We even pitched OurSOS to influential figures at BCIT, including the Mayor.",
             "UI/UX Design, Project Management, Ideation & Research, Branding & Visual Identity, Agile Collaboration, Problem Solving with AI"
         ],
         links: {
-            // liveDemo: "https://example.com/oursos-demo", // Add actual demo link if available
+            liveDemo: "https://oursos.vercel.app", // Add actual demo link if available
             // github: "https://github.com/your-repo/oursos"  // Add GitHub link if applicable
         }
     },
