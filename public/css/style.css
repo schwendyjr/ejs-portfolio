@@ -72,6 +72,11 @@ ul {
   list-style: none;
 }
 a {
+  text-decoration-line: none;
+  color: var(--text-color2);
+}
+
+.contact-container {
   text-decoration-line: underline;
   color: var(--text-color2);
 }
