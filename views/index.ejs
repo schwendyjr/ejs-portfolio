@@ -12,7 +12,7 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav-logo">Parker Schwendeman</a>
+                <a href="/" class="nav-logo">Parker Schwendeman</a>
 
             </div>
 
@@ -211,6 +211,7 @@
                 <% if (successMessage) { %>
                     <div class="success-message" style="color: green; margin-bottom: 15px;">
                         <%= successMessage %>
+                        <a href="/" class="back-to-home-link">Back to Homepage</a> <!-- ADDED LINK BELOW SUCCESS MESSAGE -->
                     </div>
                 <% } else if (errorMessage) { %>
                     <div class="error-message" style="color: red; margin-bottom: 15px;">

@@ -72,7 +72,7 @@ ul {
   list-style: none;
 }
 a {
-  text-decoration: none;
+  text-decoration-line: underline;
   color: var(--text-color2);
 }
 img {
