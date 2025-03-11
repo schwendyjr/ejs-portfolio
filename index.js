@@ -30,10 +30,29 @@ app.post("/send-email", async (req, res) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        res.send("Email sent successfully!");
+        console.log("Email sent successfully!");
+        // **CHANGE: Render 'index' with success message**
+        res.render('index', {
+            portfolioItems: portfolioItems, // Re-pass portfolio data
+            isDetailPage: false,
+            project: null,
+            successMessage: "Email sent successfully!", // Success message
+            errorMessage: null, // Clear any previous error
+            scrollToContact: true // ADD THIS LINE - Signal to scroll
+
+        });
     } catch (error) {
         console.error(error);
-        res.send("Error sending email.");
+        // **CHANGE: Render 'index' with error message**
+        res.render('index', {
+            portfolioItems: portfolioItems, // Re-pass portfolio data
+            isDetailPage: false,
+            project: null,
+            errorMessage: "Error sending email. Please try again later.", // Error message
+            successMessage: null, // Clear any previous success
+            scrollToContact: true // ADD THIS LINE - Signal to scroll
+
+        });
     }
 });
 
@@ -43,7 +62,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.render('index', { portfolioItems, isDetailPage: false, project: null }); // Pass isDetailPage: false for homepage
+    // **CHANGE: Initialize successMessage and errorMessage to null**
+    res.render('index', {
+        portfolioItems: portfolioItems,
+        isDetailPage: false,
+        project: null,
+        successMessage: null, // Initialize to null
+        errorMessage: null  // Initialize to null
+    });
 });
 
 app.get('/portfolio/:id', (req, res) => {
@@ -51,11 +77,17 @@ app.get('/portfolio/:id', (req, res) => {
     if (!project) {
         return res.status(404).send("Project not found");
     }
-    res.render('index', { portfolioItems, project, isDetailPage: true }); // Pass isDetailPage: true and the specific project
+    // **CHANGE: Initialize successMessage and errorMessage to null**
+    res.render('index', {
+        portfolioItems: portfolioItems,
+        project: project,
+        isDetailPage: true,
+        successMessage: null, // Initialize to null
+        errorMessage: null  // Initialize to null
+    });
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
-

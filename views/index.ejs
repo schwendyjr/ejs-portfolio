@@ -13,7 +13,7 @@
         <nav class="nav bd-grid">
             <div>
                 <a href="#" class="nav-logo">Parker Schwendeman</a>
-                
+
             </div>
 
             <!-- Navigation Menu -->
@@ -27,7 +27,7 @@
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
 
                 </ul>
-                
+
             </div>
 
             <!-- Navigation Toggle (for mobile) -->
@@ -36,7 +36,7 @@
             </div>
         </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main class="l-main">
         <!-- Home Section -->
@@ -50,7 +50,7 @@
                 <button id="leaveButton" class="exit-button">
                     <img src="/images/homepageassets/path-to-exit-sign.jpg" alt="Exit Sign">
                 </button>
-                
+
                 <!-- Scroll Down Indicator -->
                 <div class="home-scroll">
                     <a href="#about" class="home-scroll-link">
@@ -70,7 +70,7 @@
                 <div class="about-img">
                     <img src="/images/portfolio/garden.png" alt="Parker Schwendeman image">
                 </div>
-                
+
 
                 <div>
                     <h2 class="about-subtitle">I believe with great design, anything is possible.</h2>
@@ -139,7 +139,7 @@
                                 <% }); %>
                             </div>
                         <% } else { %>
-                            <img src="<%= project.image %>" alt="<%= project.title %>"> 
+                            <img src="<%= project.image %>" alt="<%= project.title %>">
                         <% } %>
 
                         <!-- Project Process/Description (using headings as requested) -->
@@ -193,29 +193,44 @@
         <!-- Contact Section -->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact Form</h2>
-
+        
             <div class="contact-container bd-grid">
                 <!-- Contact Information -->
                 <div class="contact-info">
                     <h3 class="contact-subtitle">EMAIL</h3>
                     <span class="contact-text">tamedogdesign@gmail.com</span>
-
+        
                     <h3 class="contact-subtitle">PHONE</h3>
                     <span class="contact-text">778-246-6070</span>
-
+        
                     <h3 class="contact-subtitle">ADDRESS</h3>
                     <span class="contact-text">Vancouver, BC, Canada</span>
                 </div>
-
-                <!-- Contact Form -->
-                <form action="/send-email" method="POST" class="contact-form">
-                    <div class="contact-inputs">
-                        <input type="text" name="name" placeholder="Name" class="contact-input" required>
-                        <input type="email" name="email" placeholder="Email" class="contact-input" required>
+        
+                <!-- Success/Error Message Display (unchanged) -->
+                <% if (successMessage) { %>
+                    <div class="success-message" style="color: green; margin-bottom: 15px;">
+                        <%= successMessage %>
                     </div>
-                    <textarea name="message" cols="0" rows="10" placeholder="Your Message" class="contact-input" required></textarea>
-                    <input type="submit" value="Send" class="contact-button">
-                </form>
+                <% } else if (errorMessage) { %>
+                    <div class="error-message" style="color: red; margin-bottom: 15px;">
+                        <%= errorMessage %>
+                    </div>
+                <% } %>
+        
+                <!-- Conditional Rendering of Contact Form -->
+                <% if (!successMessage) { %>  <!-- Show form only if successMessage is NOT present -->
+                    <!-- Contact Form -->
+                    <form action="/send-email" method="POST" class="contact-form">
+                        <div class="contact-inputs">
+                            <input type="text" name="name" placeholder="Name" class="contact-input" required>
+                            <input type="email" name="email" placeholder="Email" class="contact-input" required>
+                        </div>
+                        <textarea name="message" cols="0" rows="10" placeholder="Your Message" class="contact-input" required></textarea>
+                        <input type="submit" value="Send" class="contact-button">
+                    </form>
+                <% } %> <!-- End of conditional form rendering -->
+        
             </div>
         </section>
     </main>
