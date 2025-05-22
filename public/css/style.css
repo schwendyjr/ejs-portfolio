@@ -211,17 +211,19 @@ img {
 .home-scroll {
   align-self: flex-start;
   padding-bottom: var(--mb2);
+  margin-right: 45px;
 }
 .home-scroll-link {
   writing-mode: vertical-rl;
   transform: rotate(-90deg);
   color: var(--white-color);
   margin-left: 50px;
+  margin-top: 225px;
 }
 
 .home-img {
   position: absolute;
-  bottom: -11.3vh;
+  bottom: -8.3vh;
 }
 
 /* -------------------- About Section Styles -------------------- */
@@ -259,6 +261,9 @@ img {
   display: block;
   margin-bottom: var(--mb4);
 }
+.about-social {
+  justify-self: left;
+}
 .about-social-icon {
   font-size: 1.4rem;
   margin: 0 var(--mb1);
@@ -293,6 +298,7 @@ img {
 
 .skills-img img {
   border-radius: 0.5rem;
+  display: flex;
 }
 .skills-img img#skill-logo { 
   max-width: 248px;   
@@ -302,6 +308,15 @@ img {
   justify-self: center;
 }
 
+.skills-box {
+  padding-left: 25px;
+}
+
+@media (max-width: 767px) {
+  .skills-box {
+    padding-left: 8px;
+  }
+}
 /* -------------------- Portfolio Section Styles -------------------- */
 .portfolio {
   background-color: var(--white-color);
@@ -563,9 +578,9 @@ img {
 /* -------------------- Media Queries for responsive layout -------------------- */
 @media screen and (max-width: 768px) {
   .home-img {
-    width: 386px;
-    bottom: 9.5vh;
-    right: -54px;
+    width: 100%;
+    bottom: 19.5vh;
+    right: 8px;
     height: 71%;
   }
 }
@@ -633,13 +648,12 @@ img {
 
   .about-container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     text-align: initial;
     padding: 4rem 0;
   }
   .about-img {
-    width: 200px;
-    height: 200px;
+    width: 97%;
+    height: 340px;
     object-fit: cover;
   }
   .about-img img {
