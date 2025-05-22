@@ -3,17 +3,17 @@ const portfolioItems = [
     {
         id: "AIR-TIME-REDESIGN",
         title: "Air Time: Refreshing Brand Identity through Website Design",
-        image: "/images/portfolio/sunset-sippers-dielineee.png", // Placeholder image path
+        image: "/images/portfolio/airtime-logo.jpg", // Placeholder image path
         images: [
-            "/images/portfolio/sunset-sippers-dielinee.png", // Placeholder detail image path
-            "/images/portfolio/sunset-sippers-dieline.png", // Placeholder detail image path            
+            "/images/portfolio/airtime-screenshot.png", // Placeholder detail image path
+            // "/images/portfolio/sunset-sippers-dieline.png", // Placeholder detail image path            
         ],
-        description: "Sunset Sippers was a self-initiated project exploring brand identity through beverage can design.  This project focused on creating a visually appealing and memorable aesthetic for a beverage product, aiming to capture a sense of relaxation and enjoyment.",
+        // description: "Sunset Sippers was a self-initiated project exploring brand identity through beverage can design.  This project focused on creating a visually appealing and memorable aesthetic for a beverage product, aiming to capture a sense of relaxation and enjoyment.",
         processHeadings: ["Project Overview", "My Contribution", "Key Skills"],
         processContent: [
-            "As an intern with AirTime, I worked closely with founder Jody Wachniak to redesign their Wix-based website, creating a professional, community-driven online presence. Leveraging skills in website design and development and the Adobe Creative Suite.",
-            "I developed custom logos, animations, and web assets to elevate the brand while staying true to its snowboarding community roots, fostering growth and engagement through a polished, user-focused digital experience.",
-            "Graphic Design for Packaging, Brand Identity Development, Visual Communication for Marketing"
+            "As an intern with Air Time, I worked closely with founder Jody Wachniak to redesign the Wix-based website, creating a professional, community-driven online presence. Leveraging skills in website design and development and the Adobe Creative Suite.",
+            "In addition to a full website redesign, I developed custom logos, animations, and web assets to elevate the brand while staying true to its snowboarding community roots, fostering growth and engagement through a polished, user-focused digital experience.",
+            "Wix Web Design, Brand Identity Development, Visual Communication for Marketing"
         ],
         links: {} // No links for design-focused project
     },
