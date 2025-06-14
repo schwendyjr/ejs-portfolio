@@ -16,7 +16,7 @@ const portfolioItems = [
             "Wix Web Design, Brand Identity Development, Visual Communication for Marketing"
         ],
         links: {
-            LiveSite: "https://www.airtimepodcast.com/", // Add actual live site URL
+            LiveDemo: "https://www.airtimepodcast.com/", // Add actual live site URL
         }
     },
     {
