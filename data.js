@@ -3,7 +3,7 @@ const portfolioItems = [
     {
         id: "AIR-TIME-REDESIGN",
         title: "Air Time: Refreshing Brand Identity through Website Design",
-        image: "/images/portfolio/airtime-logo.jpg", // Placeholder image path
+        image: "/images/portfolio/airtime-screenshot.png", // Placeholder image path
         images: [
             "/images/portfolio/airtime-screenshot.png", // Placeholder detail image path
             // "/images/portfolio/sunset-sippers-dieline.png", // Placeholder detail image path            
@@ -15,7 +15,9 @@ const portfolioItems = [
             "In addition to a full website redesign, I developed custom logos, animations, and web assets to elevate the brand while staying true to its snowboarding community roots, fostering growth and engagement through a polished, user-focused digital experience.",
             "Wix Web Design, Brand Identity Development, Visual Communication for Marketing"
         ],
-        links: {} // No links for design-focused project
+        links: {
+            LiveSite: "https://www.airtimepodcast.com/", // Add actual live site URL
+        }
     },
     {
         id: "full-stack-portfolio-website",
